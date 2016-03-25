@@ -26,7 +26,7 @@ class UserController extends Controller
         }
 
         return $this->render('AppBundle:User:index.html.twig', array(
-            'form' => $form->createView(), ['username' => $sessionServise->getuserName()]
+            'form' => $form->createView(), 'username' => $sessionServise->getUserName()
         ));
     }
 }

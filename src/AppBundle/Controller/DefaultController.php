@@ -28,6 +28,7 @@ class DefaultController extends Controller
                     ->add('notice', 'Try after ' . $time . ' seconds');
             } else {
                 if ($form->isValid() && $this->get('user_service')->checkUser($user)) {
+                    $sessionServise->login($user->getLogin());
                     return $this->redirect($this->generateUrl('user'), 301);
                 } else {
                     $sessionServise->addCount();

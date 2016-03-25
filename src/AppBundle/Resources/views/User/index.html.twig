@@ -1,4 +1,5 @@
 Wellcome {{ username }} !
+
 <form action="{{ path('user') }}" method="post" {{ form_enctype(form) }}>
     {{ form_widget(form) }}
     <input type="submit" name="logout" value="logout" />

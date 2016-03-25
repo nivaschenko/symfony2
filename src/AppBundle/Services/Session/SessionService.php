@@ -18,13 +18,13 @@ class SessionService
     public function login($username)
     {
         $this->removeTimer();
-        $this->session->add('username', $username);
+        $this->session->set('username', $username);
         return $this;
     }
     
     public function logout()
     {
-        $this->session->add('username', false);
+        $this->session->set('username', false);
         return $this;
     }
     
