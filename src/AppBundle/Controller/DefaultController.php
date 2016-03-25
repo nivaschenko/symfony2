@@ -14,6 +14,10 @@ class DefaultController extends Controller
         $user = new User();
         $sessionServise =  $this->get('session_service')
             ->setSession($request->getSession());
+        
+        if ( $sessionServise->isLogin() ) {
+            return $this->redirect($this->generateUrl('user'), 301);
+        }
 
         $form = $this->createFormBuilder($user)
             ->add('login', 'text')

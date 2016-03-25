@@ -28,6 +28,7 @@ class UserService
         if (  ($tmpUser = $this->read($user->getLogin())) instanceof User ) {
             return md5($user->getPassword()) == $tmpUser->getPassword();
         }
+        return false;
         
     }
     

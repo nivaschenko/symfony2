@@ -17,3 +17,8 @@ parameters:
 
     # A secret key that's used to generate certain security-related tokens
     secret:            ThisTokenIsNotSoSecretChangeIt
+
+    user_service_class: AppBundle\Services\User\UserService
+    user_service_dir: "%kernel.root_dir%/../src/AppBundle/Resources/LoginData"
+    
+    session_service_class: AppBundle\Services\Session\SessionService
