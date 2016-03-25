@@ -1,0 +1,7 @@
+index:
+     pattern:  /
+     defaults: { _controller: AppBundle:Default:index }
+user:
+    pattern: /user
+    defaults: { _controller: AppBundle:User:index }
+

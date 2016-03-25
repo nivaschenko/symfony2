@@ -1,0 +1,12 @@
+{% for flashMessage in app.session.flashbag.get('notice') %}
+    <div id="flashmessage" class="flash-notice error">
+        {{ flashMessage }}
+    </div>
+{% endfor %}
+
+
+<form action="{{ path('index') }}" method="post" {{ form_enctype(form) }}>
+    {{ form_widget(form) }}
+
+    <input type="submit" />
+</form>
